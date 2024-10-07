@@ -3,6 +3,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import FacebookLoginButton from "../components/FacebookLoginButton";
 import GoogleLoginButton from "../components/GoogleLoginButton";
+import { Link } from "react-router-dom";
+
 
 const Login = () => {
   const validationSchema = Yup.object({
@@ -102,12 +104,14 @@ const Login = () => {
         <div>
           <p>
             {`Don't have an account? `}
-            <span className="text-blue-500 font-semibold underline underline-offset-4">
+            <Link
+              to="/register"
+              className="text-blue-500 font-semibold underline underline-offset-4"
+            >
               Create an account
-            </span>
+            </Link>
           </p>
-        </div>
-      </form>
+        </div>      </form>
     </div>
   );
 };
