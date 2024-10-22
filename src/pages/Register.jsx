@@ -49,7 +49,7 @@ const Register = () => {
   return (
     <div className="h-screen flex flex-col items-center justify-center ">
       <form
-        className="border-3 flex flex-col justify-center items-center gap-7 rounded-md shadow-lg p-16 h-[90%] mt-44 mb-9 "
+        className="border-3 flex flex-col justify-center items-center gap-7 rounded-md shadow-lg p-16 h-[90%] mt-8 mb-9 "
         onSubmit={formik.handleSubmit}
       >
         <div>

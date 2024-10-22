@@ -38,6 +38,17 @@ function ProductsProvider({ children }) {
       setFilteredProducts(searchedProducts);
     }
   }, [searchQuery, products]);
+  ///////////////////////////////////////
+  const filterCategories = async (cat) => {
+    if (!cat) {
+      setFilteredProducts(products);
+    }
+    const res = await fetch(
+      `https://fakestoreapi.com/products/category/${cat}`
+    );
+    const data = await res.json();
+    setFilteredProducts(data);
+  };
 
   return (
     <ProductsContext.Provider
@@ -47,6 +58,8 @@ function ProductsProvider({ children }) {
         searchQuery,
         setSearchQuery,
         filteredProducts,
+        filterCategories,
+        setFilteredProducts,
       }}
     >
       {children}

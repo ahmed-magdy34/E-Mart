@@ -76,7 +76,7 @@ const Login = () => {
             <div className="text-red-500 text-sm">{formik.errors.password}</div>
           )}
         </div>
-        <div className="flex justify-between gap-20 mt-[-16px]">
+        <div className="flex justify-between gap-20 mt-[-16px] text-sm">
           <label>
             <input
               type="checkbox"
@@ -87,7 +87,7 @@ const Login = () => {
             />
             Remember me
           </label>
-          <p className="text-blue-500 font-semibold underline underline-offset-4">
+          <p className="text-blue-500 font-semibold underline underline-offset-4 text-sm">
             Forgot Password?
           </p>
         </div>
