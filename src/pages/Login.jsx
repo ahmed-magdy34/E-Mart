@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import FacebookLoginButton from "../components/FacebookLoginButton";
 import GoogleLoginButton from "../components/GoogleLoginButton";
 import { Link } from "react-router-dom";
-
+import { FaEnvelope, FaLock } from "react-icons/fa";
 
 const Login = () => {
   const validationSchema = Yup.object({
@@ -43,30 +43,35 @@ const Login = () => {
           </p>
         </div>
         <div className="flex flex-col gap-4">
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Email"
-            className="p-2 w-80 rounded-md border-2 border-gray-400"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
+          <div className="relative w-80">
+            <FaEnvelope className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email"
+              className="p-2 pl-8 w-full rounded-md border-2 border-gray-400"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
           {formik.touched.email && formik.errors.email && (
             <div className="text-red-500 text-sm">{formik.errors.email}</div>
           )}
-
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Password"
-            className="p-2 rounded-md border-2 border-gray-400"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
+          <div className="relative w-80">
+            <FaLock className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              className="p-2 rounded-md border-2 w-full pl-8 border-gray-400"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
           {formik.touched.password && formik.errors.password && (
             <div className="text-red-500 text-sm">{formik.errors.password}</div>
           )}
@@ -111,7 +116,8 @@ const Login = () => {
               Create an account
             </Link>
           </p>
-        </div>      </form>
+        </div>
+      </form>
     </div>
   );
 };

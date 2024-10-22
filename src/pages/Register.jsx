@@ -47,13 +47,13 @@ const Register = () => {
   });
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="h-screen flex flex-col items-center justify-center ">
       <form
-        className="border-3 flex flex-col justify-center items-center gap-7 rounded-md shadow-lg p-16"
+        className="border-3 flex flex-col justify-center items-center gap-7 rounded-md shadow-lg p-16 h-[90%] mt-44 mb-9 "
         onSubmit={formik.handleSubmit}
       >
         <div>
-          <h1 className="text-2xl font-bold text-center mb-3">
+          <h1 className="text-2xl font-bold text-center mb-3 mt-3">
             Create your account
           </h1>
           <p className="text-center mx-3 text-gray-500 text-sm font-normal">
@@ -178,9 +178,9 @@ const Register = () => {
           <FacebookLoginButton />
         </div>
 
-        <div>
+        <div className="mb-7">
           <p>
-            Already have an account?{" "}
+            Already have an account?
             <Link
               to="/"
               className="text-blue-500 font-semibold underline underline-offset-4"
