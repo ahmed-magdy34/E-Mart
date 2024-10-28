@@ -2,7 +2,7 @@ import Logo from "../assets/images/logo_transparent.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black  shadow dark:bg-gray-900 mt-4 w-full h-48">
+    <footer className="bg-[#3DA495]  shadow dark:bg-gray-900 mt-4 w-full h-72">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <a
