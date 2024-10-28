@@ -4,6 +4,7 @@ import image3 from "../assets/sliders/ecommerce-product-photography-Guide-2024.j
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { useState } from "react";
 import { useTheme } from "../contexts/ThemeContext";
+import { Carousel } from "flowbite-react";
 
 const images = [image1, image2, image3];
 

@@ -1,3 +1,10 @@
+@import "flowbite/dist/flowbite.css"; /* Must be at the top */
+
+/* Tailwind base styles */
 @tailwind base;
+
+/* Tailwind component styles */
 @tailwind components;
+
+/* Tailwind utility styles */
 @tailwind utilities;
